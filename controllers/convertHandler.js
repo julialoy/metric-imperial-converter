@@ -13,31 +13,31 @@ function computeFraction(num1, num2) {
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    console.log(`GET NUM INPUT: ${input}`);
     const newRegex = /[a-z].*/i;
     const unitChar = input.match(newRegex);
     const unitStartInd = input.indexOf(unitChar); 
-    
     let result = input.slice(0, unitStartInd);
-    
+
     // If no number is provided default to 1
     if (result.length === 0) {
       result = 1;
+      return result;
     }
-    console.log(`UNIT CHAR: ${unitChar}`);
-    console.log(`GET NUM RESULT: ${result}`);
     
     // Handle Fractions
-    if (result.indexOf('/')) {
+    if (result.indexOf('/') !== -1) {
+      const divisionRegexp = /\//g;
+      const doubFractQuery = result.match(divisionRegexp);
+      
+      if (doubFractQuery.length > 1) {
+        return 'invalid number';
+      }
+
       const divisionInd = result.indexOf('/');
       const dividend = parseFloat(result.slice(0, divisionInd));
       const divisor = parseFloat(result.slice(divisionInd+1));
-      
-      if (dividend.indexOf('/') !== -1 || divisor.indexOf('/') !== -1) {
-        return 'invalid number';
-      }
-      
       result = computeFraction(dividend, divisor);
+      
     } else {
       result = parseFloat(result);
     }

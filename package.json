@@ -1,0 +1,40 @@
+{
+  "name": "metric-imperial-converter",
+  "version": "1.0.0",
+  "description": "Metric to imperial converter",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julialoy/metric-imperial-converter.git"
+  },
+  "keywords": [
+    "[\"node\"",
+    "\"hyperdev\"",
+    "\"express\"]"
+  ],
+  "author": "Julia Loy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julialoy/metric-imperial-converter/issues"
+  },
+  "homepage": "https://github.com/julialoy/metric-imperial-converter#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "core-js": "^3.6.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "mocha": "^7.1.0",
+    "mongodb": "^3.5.4",
+    "zombie": "^6.1.4"
+  }
+}

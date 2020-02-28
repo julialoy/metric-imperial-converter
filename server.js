@@ -13,6 +13,7 @@ const runner            = require('./test-runner');
 const app = express();
 
 process.env.NODE_ENV='test';
+process.env.PORT=3000;
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
