@@ -136,7 +136,6 @@ function ConvertHandler() {
       result = initFloat / miToKm;
     }
 
-    //result = parseFloat(result.toFixed(5));
     result = parseFloat(result);
 
     return result;
